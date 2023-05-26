@@ -34,10 +34,10 @@ GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/its-star-boi/ShizukaXMus
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 CHANNEL = getenv(
-    "CHANNEL", "FH_KP"
+    "CHANNEL", "KB_HE"
 )  # قناه الاشتراك الاجباري مثل هيك https://t.me/M_O_D_Y_CH
 CHANNEL_SUDO = getenv(
-    "CHANNEL_SUDO", "https://t.me/FH_KP"
+    "CHANNEL_SUDO", "https://t.me/KB_HE"
 )  # قناة السورس هيك https://t.me/M_O_D_Y_CH
 SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/KB_HE"
