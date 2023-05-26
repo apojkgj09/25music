@@ -25,7 +25,7 @@ async def khalid(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳 ²", url=f"https://t.me/FHK_M5"),
+                InlineKeyboardButton("𐏓 𝘼𝙆𝘼𝙈𝙀𝆹𝅥𝅮⏤͟͟͞͞ ░⃟‌‎‌‌🇪🇦", url=f"https://t.me/FHK_M5"),
                 ],[
                 InlineKeyboardButton(
                         "𝙨𝙤𝙪𝙧𝙘𝙚 𝙡𝙞𝙣𝙙𝙖", url=f"https://t.me/FH_KP"),
