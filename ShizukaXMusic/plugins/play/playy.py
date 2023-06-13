@@ -1,12 +1,12 @@
 #
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
-# This file is part of < https://github.com/TeamYukki/ShizukaXMusicBot > project,
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/ShizukaXMusicBot/blob/master/LICENSE >
+# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 import random
 import string
 from ast import ExceptHandler
@@ -17,8 +17,7 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import (BANNED_USERS, lyrical, YAFA_NAME,
-                    YAFA_CHANNEL, CHANNEL_SUDO)
+from config import BANNED_USERS, lyrical
 from strings import get_command
 from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
@@ -36,36 +35,13 @@ from ShizukaXMusic.utils.inline.playlist import botplaylist_markup
 from ShizukaXMusic.utils.logger import play_logs
 from ShizukaXMusic.utils.stream.stream import stream
 
-
-force_btn = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(   
-              text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",)                        
-        ],        
-    ]
-)
-async def check_is_joined(message):    
-    try:
-        userid = message.from_user.id
-        status = await app.get_chat_member(f"{CHANNEL_SUDO}", userid)
-        return True
-    except Exception:
-        await message.reply_text("**◇︰ عذرا، عليك الانضمام الى قناة البوت أولاً :**",reply_markup=force_btn,parse_mode="markdown",disable_web_page_preview=False)
-        return False
-      
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
-@app.on_message(filters.command(["شغل","تشغيل","شغلي"],"")    
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
 @app.on_message(
-    filters.command(PLAY_COMMAND)
-    & filters.group
+    filters.command(["شغل","تشغيل","لنداشغلي","شغلي"],"")
+    & filters.channel
     & ~filters.edited
     & ~BANNED_USERS
 )
@@ -81,8 +57,6 @@ async def play_commnd(
     url,
     fplay,
 ):
-    if not await check_is_joined(message):
-        return
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
@@ -90,8 +64,8 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
+    user_id = message.from_user.id if message.from_user else "1121532100"
+    user_name = message.from_user.first_name if message.from_user else "None"
     audio_telegram = (
         (
             message.reply_to_message.audio
