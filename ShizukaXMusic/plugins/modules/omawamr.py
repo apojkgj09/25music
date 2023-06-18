@@ -14,7 +14,7 @@ from pyrogram.errors import MessageNotModified
 
 
 
-@app.on_message(filters.command(["الاوامر","اوامرليندا"],""))
+@app.on_message(filters.command(["تفعيل"],""))
 async def khalid(client: Client, message: Message):
     await message.reply_video(
         f""" 🐰**[مرحبا بك] [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ! \n
