@@ -16,7 +16,6 @@ from pyrogram.errors import MessageNotModified
 
 @app.on_message(filters.command(["تفعيل"],""))
 async def arbic(_, query: CallbackQuery):
-    await query.answer("home start")
     await query.edit_message_text(
         f""" 🐰**[مرحبا بك] [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ! \n
 ※ [انا بوت تشغيل الأغاني والفيديو  في المكالمه المرئية](https://t.me/N_G_12) \n
