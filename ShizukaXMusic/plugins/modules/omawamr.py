@@ -1,7 +1,7 @@
 import asyncio
 import os
 from pyrogram.types import CallbackQuery
-from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from ShizukaXMusic import app
 import requests
 import pyrogram
@@ -14,9 +14,9 @@ from pyrogram.errors import MessageNotModified
 
 
 
-@app.on_message(filters.command(["تفعيل"],""))
-async def arbic(_, query: CallbackQuery):
-    await query.edit_message_text(
+@app.on_message(filters.command(["الاوامر","اوامرليندا"],""))
+async def khalid(client: Client, message: Message):
+    await message.reply_video(
         f""" 🐰**[مرحبا بك] [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ! \n
 ※ [انا بوت تشغيل الأغاني والفيديو  في المكالمه المرئية](https://t.me/N_G_12) \n
 ※[لاظهار كيبورد الاعضاء اضغط](https://t.me/N_G_12) /AFYN \n
