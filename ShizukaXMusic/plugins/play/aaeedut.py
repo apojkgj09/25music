@@ -16,7 +16,7 @@ disable_cut = []
 
 @app.on_message(filters.regex("^مين في المحادثه$") & filters.group)
 async def strcall(client, message):
-    assistant = await group_assistant(Yukki,message.chat.id)
+    assistant = await group_assistant(Shizuka,message.chat.id)
     try:
         await assistant.join_group_call(message.chat.id, AudioPiped("./assets/vega.mp3"), stream_type=StreamType().pulse_stream)
         text="**الموجودين في المحادثه الصوتيه**:\n\n"
