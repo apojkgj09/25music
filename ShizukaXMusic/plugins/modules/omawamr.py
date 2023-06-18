@@ -14,7 +14,7 @@ from pyrogram.errors import MessageNotModified
 
 
 
-@app.on_message(filters.command(["/start"],""))
+@app.on_message(filters.command(["تفعيل"],""))
 async def arbic(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
