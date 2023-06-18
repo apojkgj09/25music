@@ -1,7 +1,7 @@
 import asyncio
 import os
 from pyrogram.types import CallbackQuery
-from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from ShizukaXMusic import app
 import requests
 import pyrogram
