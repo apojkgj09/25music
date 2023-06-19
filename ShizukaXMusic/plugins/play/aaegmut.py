@@ -21,13 +21,13 @@ async def arbic(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "المجموعات", callback_data=f"cAfyon"),
+                        "السورس", callback_data=f"cAfyon"),
                 ],[
                     InlineKeyboardButton(
-                        "القنوات", callback_data=f"cbbasic"),
+                        "اوامر المجموعة", callback_data=f"cbbasic"),
                 ],[
                     InlineKeyboardButton(
-                        " 𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙰 🎶", url=f"https://t.me/FH_KP"),                    
+                        "رجـوع", url=f"https://t.me/FH_KP"),                    
                 ],
             ]
         ),
