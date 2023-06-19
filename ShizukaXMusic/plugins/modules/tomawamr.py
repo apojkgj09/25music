@@ -31,7 +31,7 @@ caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ 
 
 @app.on_callback_query(filters.regex("arbic"))
 async def bhr(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f""" ااهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل👇**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
+   await query.edit_message_caption(caption =f"""**• انا بوت اختصاصـي  تشغيل الأغاني في المحادثات الصوتيـه بـدون تقطيع **\n\n**إذا واجهت مشكله تواصل مع مطور البوت** @FHK_M5\n\n ~ **جميع اوامر البوت موجودة بالاسفل👇**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
@@ -60,7 +60,7 @@ async def bhr(_, query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("mmmm"))
 async def tt(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""ٓ**طريقة تفعيل البوت في مجموعتك :**
+   await query.edit_message_caption(caption =f"""**طريقة تفعيل البوت في مجموعتك :**
 1 - **اولا قم بإضافة البوت اللي مجموعتك \n√.**
 2 - **قم برفع البوت مشرف مع الصلاحيات المطلوبة \n√.**
 3 - ** لتحديث قائمة الادمن /Reload قم بكتابة الامر \n√.**
