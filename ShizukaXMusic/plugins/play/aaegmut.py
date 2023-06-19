@@ -34,7 +34,7 @@ async def arbic(_, query: CallbackQuery):
                         "المطور", url=f"https://t.me/FHK_M5"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"gggg"),                    
+                        "🔙 رجوع", callback_data=f"gggg"),                    
                 ],
             ]
         ),
@@ -57,7 +57,7 @@ async def cbguides(_, query: CallbackQuery):
 8»**لتحميـل الاغانـي اڪتب : بحث او تحميل**
 """,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("رجـوع", callback_data="arbic")]]
+            [[InlineKeyboardButton("🔙 رجـوع", callback_data="arbic")]]
         ),
     )
 
@@ -84,7 +84,7 @@ async def cbbasic(_, query: CallbackQuery):
                         "ربط القناة", callback_data=f"Afyon"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"),
+                        "🔙 رجـوع.", callback_data=f"hmaya"),
                ],
           ]
         ),
@@ -113,7 +113,7 @@ async def acbguides(_, query: CallbackQuery):
 8 » **للاستفسار** » @FH_KN
 \n __ 𝙨𝙤𝙪𝙧𝙘𝙚 𝙡𝙞𝙣𝙙𝙖 [ᴄʜᴀɴɴᴇʟ](https://t.me/KB_HE)""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("رجـوع", callback_data="arbic")]]
+            [[InlineKeyboardButton("•رجـوع•", callback_data="arbic")]]
         ),
     )
 
