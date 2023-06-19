@@ -13,13 +13,25 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import MessageNotModified
 
 
-
 @app.on_message(filters.command(["الاوامر","اوامرليندا"],""))
 async def khalid(client: Client, message: Message):
-    await message.reply_video(
-        video=f"https://telegra.ph/file/dc6751255ec8481ace945.mp4",
-        caption=f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
+caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
         reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                
+                    InlineKeyboardButton(
+                        "طريقة تفعيل البوت", callback_data="arbic"),
+                ],
+            ]
+        ),
+    )
+
+@app.on_callback_query(filters.regex("arbic"))
+async def bhr(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
