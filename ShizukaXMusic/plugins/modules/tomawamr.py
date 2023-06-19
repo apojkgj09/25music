@@ -35,7 +35,7 @@ async def bhr(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "طريقة تفعيل البوت", callback_data=f"mmm"),
+                        "طريقة تفعيل البوت", callback_data=f"mmmm"),
                 ],[
                     InlineKeyboardButton(
                         "اوامر المجموعة", callback_data=f"zzzz"),
