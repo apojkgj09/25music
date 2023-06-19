@@ -1,3 +1,19 @@
+import sys
+import asyncio
+import requests
+import re
+import string
+from pyrogram.types import Message
+from aiohttp import ClientSession
+from pyrogram import filters, Client
+from strings import get_command
+from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMarkup, Message)
+from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+
+
+
+
+
 @app.on_callback_query(filters.regex("arbic"))
 async def bhr(_, query: CallbackQuery):
     await message.reply_video(
