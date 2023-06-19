@@ -59,28 +59,16 @@ async def bhr(_, query: CallbackQuery):
     )
 @app.on_callback_query(filters.regex("hmaya"))
 async def bhr(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
+   awasync def khalid(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
+caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
+        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                      InlineKeyboardButton(
-                        "السورس", callback_data=f"gg"),
-                ],[
+                
                     InlineKeyboardButton(
-                        "اوامر المجموعة", callback_data=f"g1"),
-
-                    InlineKeyboardButton(
-                        "اوامر القنوات", callback_data=f"g2"),
-
-                ],[
-                    InlineKeyboardButton(
-                        "ربط القنوات", callback_data=f"cha"),
-
-                    InlineKeyboardButton(
-                        "اوامر البحث", callback_data=f"don"),
-                ],[
-                    InlineKeyboardButton(
-                        "إغـلاق", callback_data=f"close"),
-
+                        "طريقة تفعيل البوت", callback_data="arbic"),
                 ],
             ]
         ),
