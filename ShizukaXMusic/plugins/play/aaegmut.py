@@ -25,7 +25,8 @@ async def arbic(_, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton(
                         "اوامر المجموعة", callback_data=f"cbbasic"),
-                ],[
+                ]
+                [
                     InlineKeyboardButton(
                         "رجـوع", url=f"https://t.me/FH_KP"),                    
                 ],
