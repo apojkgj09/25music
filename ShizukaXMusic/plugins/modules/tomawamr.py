@@ -57,21 +57,7 @@ async def bhr(_, query: CallbackQuery):
             ]
         ),
     )
-@app.on_callback_query(filters.regex("hmaya"))
-async def bhr(_, query: CallbackQuery):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
-caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                
-                    InlineKeyboardButton(
-                        "طريقة تفعيل البوت", callback_data="arbic"),
-                ],
-            ]
-        ),
-    )
+
 @app.on_callback_query(filters.regex("g1"))
 async def tt(_, query: CallbackQuery):
    await query.edit_message_caption(caption =f"""ٓاهلـين حبـي  أليـك قائمة اوامـر التشغيل في المجموعه**
@@ -94,7 +80,7 @@ async def tt(_, query: CallbackQuery):
                         "تحديثات لينـدا", callback_data=f"devmusic"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"),
+                        "رجـوع 🎶", callback_data=f"arbic"),
                ],
           ]
         ),
@@ -119,7 +105,7 @@ async def ddd(_, query: CallbackQuery):
                         "تحديثات لينـدا", callback_data=f"devmusic"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"),
+                        "رجـوع 🎶", callback_data=f"arbic"),
                ],
           ]
         ),
@@ -150,7 +136,7 @@ async def ddd(_, query: CallbackQuery):
                         "تحديثات لينـدا", callback_data=f"devmusic"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"),
+                        "رجـوع 🎶", callback_data=f"arbic"),
                ],
           ]
         ),
@@ -166,7 +152,7 @@ async def br(_, query: CallbackQuery):
                         "تحديثات لينـدا", callback_data=f"devmusic"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"), 
+                        "رجـوع 🎶", callback_data=f"arbic"), 
                ],
             ]
         ),
@@ -186,7 +172,7 @@ async def devmusic(_, query: CallbackQuery):
                         "𝙘𝙝𝙖𝙣𝙣𝙚𝙡 ²", url=f"https://t.me/KB_HE"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"),
+                        "رجـوع 🎶", callback_data=f"arbic"),
             ]
         ]
          ),
@@ -207,7 +193,7 @@ async def devmusic(_, query: CallbackQuery):
                         "𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹", url=f"https://t.me/FH_3B"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"hmaya"),
+                        "رجـوع 🎶", callback_data=f"arbic"),
                ],
           ]
         ),
