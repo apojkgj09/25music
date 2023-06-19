@@ -13,7 +13,7 @@ from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube,
 #########
 #الاوامر
 @app.on_message(
-    filters.command(["بوت"],""))
+    filters.command(["ggggo"],""))
 async def khalid(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
