@@ -29,7 +29,7 @@ caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ 
         ),
     )
     
-@Client.on_callback_query(filters.regex("ggggk"))
+@Client.on_callback_query(filters.regex("oooo"))
 async def arbic(_, query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
