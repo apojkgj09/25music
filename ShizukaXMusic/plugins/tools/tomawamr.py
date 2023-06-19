@@ -1,36 +1,23 @@
-import sys
-import asyncio
-import requests
-import re
-import string
-from pyrogram.types import Message
-from aiohttp import ClientSession
-from pyrogram import filters, Client
-from strings import get_command
-from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMarkup, Message)
-from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-
-
-
-
-
 @app.on_callback_query(filters.regex("arbic"))
-async def khalid(client: Client, message: Message):
+async def bhr(_, query: CallbackQuery):
     await message.reply_video(
         video=f"https://telegra.ph/file/dc6751255ec8481ace945.mp4",
         caption=f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [                    
+                [
                     InlineKeyboardButton(
-                        "اوامر المجموعة", callback_data=f"gg"),
+                        "السورس", callback_data=f"gg"),
+                ],[
+                    InlineKeyboardButton(
+                        "اوامر المجموعة", callback_data=f"g1"),
 
                     InlineKeyboardButton(
-                        "اوامر القنوات", callback_data=f"kk"),
+                        "اوامر القنوات", callback_data=f"g2"),
 
                 ],[
                     InlineKeyboardButton(
-                        "ربط القنوات", callback_data=f"chua"),
+                        "ربط القنوات", callback_data=f"cha"),
 
                     InlineKeyboardButton(
                         "اوامر البحث", callback_data=f"don"),
@@ -47,12 +34,14 @@ async def bhr(_, query: CallbackQuery):
    await query.edit_message_caption(caption =f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
             [
                 [
-                      
+                      InlineKeyboardButton(
+                        "السورس", callback_data=f"gg"),
+                ],[
                     InlineKeyboardButton(
-                        "اوامر المجموعة", callback_data=f"gg"),
+                        "اوامر المجموعة", callback_data=f"g1"),
 
                     InlineKeyboardButton(
-                        "اوامر القنوات", callback_data=f"kkk"),
+                        "اوامر القنوات", callback_data=f"g2"),
 
                 ],[
                     InlineKeyboardButton(
@@ -70,63 +59,80 @@ async def bhr(_, query: CallbackQuery):
     )
 @app.on_callback_query(filters.regex("g1"))
 async def tt(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f""""**طريقة تفعيل البوت في مجموعتك :**
-1.) **اولا قم بإضافة البوت اللي مجموعتك \n√.**
-2.) **قم برفع البوت مشرف مع الصلاحيات المطلوبة \n√.**
-3.) ** لتحديث قائمة الادمن /Reload قم بكتابة الامر \n√.**
-4.) **تاكد من تشغيل المحادثة الصوتية\n√.**
-5.) ** اكتب شغل او تشغيل + اسم الاغنية \n√.**
-▪️ ** في حال لم يستطع الحساب المساعد الانضمام إلى مجموعتك قم باضافتة يدوي\n√.**
-\n√ **في حال واجهت اي مشكلة اخري يمكنك التواصل معي : @FH_ME **
-\n __ 𝙨𝙤𝙪𝙧𝙘𝙚 𝙡𝙞𝙣𝙙𝙖 [ᴄʜᴀɴɴᴇʟ](https://t.me/KB_HE)""",
+   await query.edit_message_caption(caption =f"""ٓاهلـين حبـي  أليـك قائمة اوامـر التشغيل في المجموعه**
+        
+**اليك قائـمة الاوامــر 👇**
+          
+
+»**لتشغيل اغنيه اكتب : تشغيل او شغل**
+»**لأنهاء الاغنيه اكتب : ايقاف او انهاء**
+»**لايقاف الاغنيه مؤقت اكتب : قفي**
+»**لتكملة الاغنيه من الايقاف المؤقت اكتب : كمل او استمر**
+»**لتخطي الاغنيه اكتب : تخطي او التالي**
+»**لكتم البوت في المحادثه اكتب : اسڪتي**
+»**لألغاء كتم البوت في المحادثه اكتب : اتكلم او تكلمي**
+»**لتحميـل الاغانـي اڪتب : بحث او تحميل**""",
        reply_markup=InlineKeyboardMarkup(
           [
                [                  
-                    
+                    InlineKeyboardButton(
+                        "تحديثات لينـدا", callback_data=f"devmusic"),
+                ],[
                     InlineKeyboardButton(
                         "رجـوع 🎶", callback_data=f"hmaya"),
                ],
           ]
         ),
     )
-@app.on_callback_query(filters.regex("gg"))
+@app.on_callback_query(filters.regex("g2"))
 async def ddd(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""اهلـين حبـي  أليـك قائمة اوامـر التشغيل:**
-1»**لتشغيل اغنيه اكتب : تشغيل او شغل**
-2»**لأنهاء الاغنيه اكتب : ايقاف او انهاء**
-3»**لايقاف الاغنيه مؤقت اكتب : قفي**
-4»**لتكملة الاغنيه من الايقاف المؤقت اكتب : كمل او استمر**
-5»**لتخطي الاغنيه اكتب : تخطي او التالي**
-6»**لكتم البوت في المحادثه اكتب : اسڪتي**
-7»**لألغاء كتم البوت في المحادثه اكتب : اتكلم او تكلمي**
-8»**لتحميـل الاغانـي اڪتب : بحث او تحميل**
-""",
+   await query.edit_message_caption(caption =f"""ٓاهلـين حبـي  أليـك قائمة اوامـر التشغيل في القناه**
+
+
+- لتشغيل اغنيه اكتب : /cplay
+- لتشغيل فيديو اكتب : /cvideo
+- لأنهاء الاغنيه اكتب : /cstop
+- لايقاف الاغنيه مؤقت اكتب : /cpause
+- لتكملة الاغنيه من الايقاف المؤقت اكتب :/cresume
+- لتخطي الاغنيه اكتب : /cskip
+- لكتم البوت في الكول اكتب : /cmute
+- لألغاء كتم البوت في الكول اكتب : /cunmute""",
        reply_markup=InlineKeyboardMarkup(
                [
                     [                  
-                                   
+                    InlineKeyboardButton(
+                        "تحديثات لينـدا", callback_data=f"devmusic"),
+                ],[
                     InlineKeyboardButton(
                         "رجـوع 🎶", callback_data=f"hmaya"),
                ],
           ]
         ),
     )
-@app.on_callback_query(filters.regex("kkk"))
+@app.on_callback_query(filters.regex("cha"))
 async def ddd(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""ٓاهلـين حبـي  أليـك قائمة اوامـر التشغيل في القنوات**:
-1 - لتشغيل اغنيه اكتب : /cplay
-2 - لتشغيل فيديو اكتب : /cvideo
-3 - لأنهاء الاغنيه اكتب : /cstop
-4 - لايقاف الاغنيه مؤقت اكتب : /cpause
-5 - لتكملة الاغنيه من الايقاف المؤقت اكتب :/cresume
-6 - لتخطي الاغنيه اكتب : /cskip
-7 - لكتم البوت في المحادثه اكتب : /cmute
-8 - لألغاء كتم البوت في المحادثه اكتب : /cunmute""",
+   await query.edit_message_caption(caption =f"""ٓاهلـين حبـي  أليـك قائمة اوامـر التشغيل في القناه**    
+
+» خطوات تشغيل في القناه
+
+» لتشغيل في قناتك
+
+‌‏« قم بانشاء جروب مربوط بقناتك
+
+» تقوم باضافة البوت في القناتك و مجموعتك وترفعه مشرف
+
+» لربط القناتك بالمجموعه ارسل  الامر التالي في المجموعة
+            
+» /channelplay + معرف قناتك
+
+» /channelplay @FH_KP مثـل**..
+
+» **للاستفسار** » @FH_KN""",
        reply_markup=InlineKeyboardMarkup(
                [
                     [                  
                     InlineKeyboardButton(
-                        "تحديثات لينـدا", callback_data=f"chua"),
+                        "تحديثات لينـدا", callback_data=f"devmusic"),
                 ],[
                     InlineKeyboardButton(
                         "رجـوع 🎶", callback_data=f"hmaya"),
@@ -134,26 +140,60 @@ async def ddd(_, query: CallbackQuery):
           ]
         ),
     ) 
-@app.on_callback_query(filters.regex("chua"))
+@app.on_callback_query(filters.regex("don"))
 async def br(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""طريقة ربط البوت بالقناة:**
-1 » خطوات تشغيل في القناه
-
-2 » لتشغيل في قناتك
-
-3 ‌‏« قم بانشاء جروب مربوط بقناتك
-
-4 » تقوم باضافة البوت في القناتك و مجموعتك وترفعه مشرف
-
-5 » لربط القناتك بالمجموعه ارسل  الامر التالي في المجموعة
-            
-6 » /channelplay + معرف قناتك
-
-7 » /channelplay @FH_KP مثـل**..
-
-8 » **للاستفسار** » @FH_KN
-\n __ 𝙨𝙤𝙪𝙧𝙘𝙚 𝙡𝙞𝙣𝙙𝙖 [ᴄʜᴀɴɴᴇʟ](https://t.me/KB_HE)""",
+   await query.edit_message_caption(caption =f"""اهليـن فيك  في قسـم التحميـل
+•**ا\nللبحث عن اغنية او تحميلها استخدم الامر التالي ↓\n\n[ بحث + اسم المطلوب ..]\n\nمثل » بحث وحشتيني**""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("رجـوع", callback_data="arbic")]]
+            [
+                [
+                      InlineKeyboardButton(
+                        "تحديثات لينـدا", callback_data=f"devmusic"),
+                ],[
+                    InlineKeyboardButton(
+                        "رجـوع 🎶", callback_data=f"hmaya"), 
+               ],
+            ]
         ),
-    )
+    ) 
+@app.on_callback_query(filters.regex("gg"))
+async def devmusic(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f"""[ٓ» ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ʟɪɴᴅᴀ](https://t.me/FH_KP)\n\n[» ᴏɴᴇ ᴏғ ᴛʜᴇ ʙᴇsᴛ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛs](https://t.me/FH_KP)\n\n[» sᴏᴜʀᴄᴇ ʟɪɴᴅᴀ](https://t.me/FH_KP)""",
+       reply_markup=InlineKeyboardMarkup(
+        [
+            [
+                    InlineKeyboardButton(
+                        "𝙙𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧", url=f"https://t.me/FHK_M5"),
+                ],[
+                    InlineKeyboardButton(
+                        "𝙘𝙝𝙖𝙣𝙣𝙚𝙡 ¹", url=f"https://t.me/FH_KP"), 
+                    InlineKeyboardButton(
+                        "𝙘𝙝𝙖𝙣𝙣𝙚𝙡 ²", url=f"https://t.me/KB_HE"),
+                ],[
+                    InlineKeyboardButton(
+                        "رجـوع 🎶", callback_data=f"hmaya"),
+            ]
+        ]
+         ),
+     )
+ 
+@app.on_callback_query(filters.regex("devmusic"))
+async def devmusic(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f"""» اهلـين حبـي أليـك قائمة قنـوات بـوت ليندا**""",
+       reply_markup=InlineKeyboardMarkup(
+          [
+               [
+                    InlineKeyboardButton(
+                        "𝙲𝙷𝙰𝙽𝙽𝙴𝙻¹", url=f"https://t.me/FH_KP"),
+                    InlineKeyboardButton(
+                        "𝙲𝙷𝙰𝙽𝙽𝙴𝙻²", url=f"https://t.me/KB_HE")
+                ],[
+                    InlineKeyboardButton(
+                        "𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹", url=f"https://t.me/FH_3B"),
+                ],[
+                    InlineKeyboardButton(
+                        "رجـوع 🎶", callback_data=f"hmaya"),
+               ],
+          ]
+        ),
+    ) 
