@@ -72,7 +72,8 @@ async def cbbasic(_, query: CallbackQuery):
 """,
         reply_markup=InlineKeyboardMarkup(
             InlineKeyboardButton("ربط القنوات", callback_data="Afyon")
-                ],[
+                ]
+                [
                     InlineKeyboardButton("رجـوع", callback_data="arbic")
                 ],
             ]
