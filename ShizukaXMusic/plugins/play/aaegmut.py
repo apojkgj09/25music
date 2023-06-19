@@ -21,15 +21,20 @@ async def arbic(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "السورس", callback_data=f"cAfyon"),
-                
-                ],
-                [
+                        "المجموعات", callback_data=f"cAfyon"),
+
                     InlineKeyboardButton(
-                        "اوامر المجموعة", callback_data=f"cbbasic"),
+                        "القنوات", callback_data=f"cbbasic"),
+
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع", url=f"https://t.me/FH_KP"),                    
+                        "التحديثات", url=f"https://t.me/FH_KN"),
+
+                    InlineKeyboardButton(
+                        "المطور", url=f"https://t.me/FHK_M5"),
+                ],[
+                    InlineKeyboardButton(
+                        "رجـوع 🎶", callback_data=f"تفعيل"),                    
                 ],
             ]
         ),
