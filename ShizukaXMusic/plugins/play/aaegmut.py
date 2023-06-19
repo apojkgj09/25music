@@ -34,7 +34,7 @@ async def arbic(_, query: CallbackQuery):
                         "المطور", url=f"https://t.me/FHK_M5"),
                 ],[
                     InlineKeyboardButton(
-                        "🔙 رجوع", callback_data=f"gggg"),                    
+                        "🔙 رجوع", callback_data=f"ggggo"),                    
                 ],
             ]
         ),
@@ -84,12 +84,28 @@ async def cbbasic(_, query: CallbackQuery):
                         "ربط القناة", callback_data=f"Afyon"),
                 ],[
                     InlineKeyboardButton(
-                        "🔙 رجـوع.", callback_data=f"hmaya"),
+                        "🔙 رجـوع.", callback_data=f"arbic"),
                ],
           ]
         ),
     )
 
+
+@Client.on_callback_query(filters.regex("ggggo"))
+async def khalid(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
+caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                
+                    InlineKeyboardButton(
+                        "طريقة تفعيل البوت", callback_data="arbic"),
+                ],
+            ]
+        ),
+    )
 
 
 @Client.on_callback_query(filters.regex("Afyon"))
