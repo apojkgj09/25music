@@ -33,7 +33,8 @@ async def arbic(_, query: CallbackQuery):
                     InlineKeyboardButton(
                         "المطور", url=f"https://t.me/FHK_M5"),
                 ],[
-                    [[InlineKeyboardButton("🔙 رجـوع", callback_data="ggggo")]]                    
+                    InlineKeyboardButton(
+                        "رجـوع 🎶", callback_data=f"ggggo"),                    
                 ],
             ]
         ),
