@@ -34,7 +34,7 @@ async def arbic(_, query: CallbackQuery):
                         "المطور", url=f"https://t.me/FHK_M5"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"oooo"),                    
+                        "رجـوع 🎶", callback_data=f"arbico"),                    
                 ],
             ]
         ),
@@ -118,7 +118,7 @@ async def acbguides(_, query: CallbackQuery):
         ),
     )
 
-@app.on_callback_query(filters.regex("oooo"))
+@app.on_callback_query(filters.regex("arbico"))
 async def devmusic(_, query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
