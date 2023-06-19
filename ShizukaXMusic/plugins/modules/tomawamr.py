@@ -59,7 +59,6 @@ async def bhr(_, query: CallbackQuery):
     )
 @app.on_callback_query(filters.regex("hmaya"))
 async def bhr(_, query: CallbackQuery):
-   awasync def khalid(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
 caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
