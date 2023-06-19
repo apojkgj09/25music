@@ -71,10 +71,7 @@ async def cbbasic(_, query: CallbackQuery):
 8 - لألغاء كتم البوت في المحادثه اكتب : /cunmute
 """,
         reply_markup=InlineKeyboardMarkup(
-            InlineKeyboardButton("ربط القنوات", callback_data="Afyon")
-                ]
-                [
-                    InlineKeyboardButton("رجـوع", callback_data="arbic")
+            InlineKeyboardButton("ربط القنوات", callback_data="cAfyon")
                 ],
             ]
         ),
