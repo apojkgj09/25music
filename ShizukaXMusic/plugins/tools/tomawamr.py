@@ -12,12 +12,11 @@ from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube,
 
 
 
-
-@app.on_message(filters.command(["بوت"],""))
+@app.on_message(filters.command(["تفعيل"],""))
 async def khalid(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
-caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
+    await message.reply_video(
+        video=f"https://telegra.ph/file/dc6751255ec8481ace945.mp4",
+        caption=f""" **- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -28,9 +27,9 @@ caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ 
             ]
         ),
     )
-@app.on_callback_query(filters.regex("arbico"))
+@app.on_callback_query(filters.regex("FH_KN"))
 async def bhr(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f"""**اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
+   await query.edit_message_caption(caption =f""" **- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -41,6 +40,7 @@ async def bhr(_, query: CallbackQuery):
             ]
         ),
     )
+
 @Client.on_callback_query(filters.regex("arbic"))
 async def arbic(_, query: CallbackQuery):
     await query.answer("home start")
@@ -71,7 +71,7 @@ async def arbic(_, query: CallbackQuery):
                         "المطور", url=f"https://t.me/FHK_M5"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"arbico"),                    
+                        "رجـوع 🎶", callback_data=f"FH_KN"),                    
                 ],
             ]
         ),
