@@ -27,8 +27,7 @@ async def arbic(_, query: CallbackQuery):
                         "القنوات", callback_data=f"cbbasic"),
                 ],[
                     InlineKeyboardButton(
-                        " 𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙰 🎶", url=f"https://t.me/FH_KP"),
-                    )
+                        " 𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙰 🎶", url=f"https://t.me/FH_KP"),                   
                 ],
             ]
         ),
