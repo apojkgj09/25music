@@ -30,8 +30,8 @@ caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ 
         ),
     )
 
-@app.on_message(filters.regex("^gggg$") & filters.group)
-async def khalid(client: Client, message: Message):
+@Client.on_callback_query(filters.regex("gggg"))
+async def arbic(_, query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
 caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
