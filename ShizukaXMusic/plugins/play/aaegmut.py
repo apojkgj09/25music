@@ -81,7 +81,7 @@ async def cbbasic(_, query: CallbackQuery):
           [
                [                  
                     InlineKeyboardButton(
-                        "تحديثات الكسا", callback_data=f"Afyon"),
+                        "ربط القناة", callback_data=f"Afyon"),
                 ],[
                     InlineKeyboardButton(
                         "رجـوع 🎶", callback_data=f"hmaya"),
