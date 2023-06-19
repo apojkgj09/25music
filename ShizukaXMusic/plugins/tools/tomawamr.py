@@ -12,40 +12,65 @@ from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube,
 
 
 
-@app.on_message(filters.command(["تفعيل"],""))
+
+
+@app.on_callback_query(filters.regex("arbic"))
 async def khalid(client: Client, message: Message):
     await message.reply_video(
         video=f"https://telegra.ph/file/dc6751255ec8481ace945.mp4",
-        caption=f""" **- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
+        caption=f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                
+                [                    
                     InlineKeyboardButton(
-                        "طريقة تفعيل البوت", callback_data="arbic"),
+                        "اوامر المجموعة", callback_data=f"gg"),
+
+                    InlineKeyboardButton(
+                        "اوامر القنوات", callback_data=f"kk"),
+
+                ],[
+                    InlineKeyboardButton(
+                        "ربط القنوات", callback_data=f"chua"),
+
+                    InlineKeyboardButton(
+                        "اوامر البحث", callback_data=f"don"),
+                ],[
+                    InlineKeyboardButton(
+                        "إغـلاق", callback_data=f"close"),
+
                 ],
             ]
         ),
     )
-@app.on_callback_query(filters.regex("FH_KN"))
+@app.on_callback_query(filters.regex("hmaya"))
 async def bhr(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f""" **- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
-         reply_markup=InlineKeyboardMarkup(
+   await query.edit_message_caption(caption =f""" اهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
             [
                 [
-                
+                      
                     InlineKeyboardButton(
-                        "طريقة تفعيل البوت", callback_data="arbic"),
+                        "اوامر المجموعة", callback_data=f"gg"),
+
+                    InlineKeyboardButton(
+                        "اوامر القنوات", callback_data=f"kkk"),
+
+                ],[
+                    InlineKeyboardButton(
+                        "ربط القنوات", callback_data=f"cha"),
+
+                    InlineKeyboardButton(
+                        "اوامر البحث", callback_data=f"don"),
+                ],[
+                    InlineKeyboardButton(
+                        "إغـلاق", callback_data=f"close"),
+
                 ],
             ]
         ),
     )
-
-@Client.on_callback_query(filters.regex("arbic"))
-async def arbic(_, query: CallbackQuery):
-    await query.answer("home start")
-    await query.edit_message_text(
-        f"""""**طريقة تفعيل البوت في مجموعتك :**
+@app.on_callback_query(filters.regex("g1"))
+async def tt(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f""""**طريقة تفعيل البوت في مجموعتك :**
 1.) **اولا قم بإضافة البوت اللي مجموعتك \n√.**
 2.) **قم برفع البوت مشرف مع الصلاحيات المطلوبة \n√.**
 3.) ** لتحديث قائمة الادمن /Reload قم بكتابة الامر \n√.**
@@ -54,36 +79,19 @@ async def arbic(_, query: CallbackQuery):
 ▪️ ** في حال لم يستطع الحساب المساعد الانضمام إلى مجموعتك قم باضافتة يدوي\n√.**
 \n√ **في حال واجهت اي مشكلة اخري يمكنك التواصل معي : @FH_ME **
 \n __ 𝙨𝙤𝙪𝙧𝙘𝙚 𝙡𝙞𝙣𝙙𝙖 [ᴄʜᴀɴɴᴇʟ](https://t.me/KB_HE)""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
+       reply_markup=InlineKeyboardMarkup(
+          [
+               [                  
+                    
                     InlineKeyboardButton(
-                        "المجموعات", callback_data=f"cAfyon"),
-
-                    InlineKeyboardButton(
-                        "القنوات", callback_data=f"cbbasic"),
-
-                ],[
-                    InlineKeyboardButton(
-                        "التحديثات", url=f"https://t.me/FH_KN"),
-
-                    InlineKeyboardButton(
-                        "المطور", url=f"https://t.me/FHK_M5"),
-                ],[
-                    InlineKeyboardButton(
-                        "رجـوع 🎶", callback_data=f"FH_KN"),                    
-                ],
-            ]
+                        "رجـوع 🎶", callback_data=f"hmaya"),
+               ],
+          ]
         ),
-        disable_web_page_preview=True,
     )
-
-
-@Client.on_callback_query(filters.regex("cAfyon"))
-async def cbguides(_, query: CallbackQuery):
-    await query.answer("user guide")
-    await query.edit_message_text(
-        f"""اهلـين حبـي  أليـك قائمة اوامـر التشغيل:**
+@app.on_callback_query(filters.regex("gg"))
+async def ddd(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f"""اهلـين حبـي  أليـك قائمة اوامـر التشغيل:**
 1»**لتشغيل اغنيه اكتب : تشغيل او شغل**
 2»**لأنهاء الاغنيه اكتب : ايقاف او انهاء**
 3»**لايقاف الاغنيه مؤقت اكتب : قفي**
@@ -93,18 +101,19 @@ async def cbguides(_, query: CallbackQuery):
 7»**لألغاء كتم البوت في المحادثه اكتب : اتكلم او تكلمي**
 8»**لتحميـل الاغانـي اڪتب : بحث او تحميل**
 """,
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 رجـوع", callback_data="arbic")]]
+       reply_markup=InlineKeyboardMarkup(
+               [
+                    [                  
+                                   
+                    InlineKeyboardButton(
+                        "رجـوع 🎶", callback_data=f"hmaya"),
+               ],
+          ]
         ),
     )
-
-
-
-@Client.on_callback_query(filters.regex("cbbasic"))
-async def cbbasic(_, query: CallbackQuery):
-    await query.answer("basic commands")
-    await query.edit_message_text(
-        f"""اهلـين حبـي  أليـك قائمة اوامـر التشغيل في القنوات**:
+@app.on_callback_query(filters.regex("kkk"))
+async def ddd(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f"""ٓاهلـين حبـي  أليـك قائمة اوامـر التشغيل في القنوات**:
 1 - لتشغيل اغنيه اكتب : /cplay
 2 - لتشغيل فيديو اكتب : /cvideo
 3 - لأنهاء الاغنيه اكتب : /cstop
@@ -112,28 +121,22 @@ async def cbbasic(_, query: CallbackQuery):
 5 - لتكملة الاغنيه من الايقاف المؤقت اكتب :/cresume
 6 - لتخطي الاغنيه اكتب : /cskip
 7 - لكتم البوت في المحادثه اكتب : /cmute
-8 - لألغاء كتم البوت في المحادثه اكتب : /cunmute
-""",
-        reply_markup=InlineKeyboardMarkup(
-          [
-               [                  
+8 - لألغاء كتم البوت في المحادثه اكتب : /cunmute""",
+       reply_markup=InlineKeyboardMarkup(
+               [
+                    [                  
                     InlineKeyboardButton(
-                        "ربط القناة", callback_data=f"Afyon"),
+                        "تحديثات لينـدا", callback_data=f"chua"),
                 ],[
                     InlineKeyboardButton(
-                        "🔙 رجـوع.", callback_data=f"arbic"),
+                        "رجـوع 🎶", callback_data=f"hmaya"),
                ],
           ]
         ),
-    )
-
-
-
-
-@Client.on_callback_query(filters.regex("Afyon"))
-async def acbguides(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""**طريقة ربط البوت بالقناة:**
+    ) 
+@app.on_callback_query(filters.regex("chua"))
+async def br(_, query: CallbackQuery):
+   await query.edit_message_caption(caption =f"""طريقة ربط البوت بالقناة:**
 1 » خطوات تشغيل في القناه
 
 2 » لتشغيل في قناتك
@@ -151,7 +154,6 @@ async def acbguides(_, query: CallbackQuery):
 8 » **للاستفسار** » @FH_KN
 \n __ 𝙨𝙤𝙪𝙧𝙘𝙚 𝙡𝙞𝙣𝙙𝙖 [ᴄʜᴀɴɴᴇʟ](https://t.me/KB_HE)""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("•رجـوع•", callback_data="arbic")]]
+            [[InlineKeyboardButton("رجـوع", callback_data="arbic")]]
         ),
     )
-
