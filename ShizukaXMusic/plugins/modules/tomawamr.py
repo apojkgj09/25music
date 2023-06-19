@@ -31,7 +31,7 @@ caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ 
 
 @app.on_callback_query(filters.regex("arbic"))
 async def bhr(_, query: CallbackQuery):
-   await query.edit_message_caption(caption =f""" اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على  الأزرار بأسفل 👇""",reply_markup=InlineKeyboardMarkup(
+   await query.edit_message_caption(caption =f""" ااهلين فيك في اوامر بوت ليندا 🎶\n\n -› **جميع اوامر البوت موجودة بالاسفل👇**\n\n• = » [ᴄʜᴀɴɴᴇʟ](t.me/FH_KP)""",reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
