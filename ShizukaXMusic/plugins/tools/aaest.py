@@ -2,8 +2,8 @@ from pyrogram import Client, filters
 from strings import get_command
 from pyrogram.types import Message, VoiceChatStarted, VoiceChatEnded
 from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.utils.database import get_assistant
+from ShizukaXMusic.core.call import Alexa
+from ShizukaXMusic.utils.database import get_assistant
 
 
 
