@@ -8,8 +8,8 @@ from ShizukaXMusic.utils.database import get_assistant
 
 
 
-@app.on_message(filters.command(["بوت"],""))
-async def khalid(client: Client, message: Message):
+@app.on_message(["بوت"],"")
+async def stcall(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/3e46bfad79e017c69ff69.jpg",
 caption=f"""**- اهلين ياحلو  {message.from_user.mention}\n\n شكرآ لاستضافتي الي مجموعتك لمعرفة كيفة استخدامي وطريقة التشغيل اضغط على زر بأسغل 👇**""",
