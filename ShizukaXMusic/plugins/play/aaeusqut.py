@@ -14,13 +14,20 @@ from strings import get_command
 
 disable_cut = []
 
-@app.on_message(filters.regex("^تغير المساعد$") & filters.group)
-async def tom_name(client, message):
-    assistant = await group_assistant(Anon, message.chat.id)
-    await message.reply("ارسل اسم المساعد الجديد:")
-    try:
-        new_name = await client.ask(message.chat.id, "اكتب اسم المساعد الجديد:")
-        await assistant.update_profile(first_name=new_name)
-        await message.reply(f"تم تغيير اسم المساعد الى {new_name}")
-    except Exception as e:
-        await message.reply("حدث خطأ اثناء تغيير اسم المساعد!")
+@app.on_message(filters.regex("^غ$") & filters.group)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(3,267)
+    url = f"https://t.me/bsmaatt/{rl}"
+    await client.send_voice(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الاغـنـية لـك",parse_mode="html",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
+
+
+
