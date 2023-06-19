@@ -22,7 +22,7 @@ async def arbic(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton(
                         "السورس", callback_data=f"cAfyon"),
-                ),
+                
                 ],
                 [
                     InlineKeyboardButton(
