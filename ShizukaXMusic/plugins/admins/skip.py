@@ -18,7 +18,6 @@ from ShizukaXMusic import YouTube, app
 from ShizukaXMusic.core.call import Shizuka
 from ShizukaXMusic.misc import db
 from ShizukaXMusic.utils.database import get_loop
-from ShizukaXMusic.utils.decorators import AdminRightsCheckCB
 from ShizukaXMusic.utils.inline.play import (stream_markup,
                                           telegram_markup)
 from ShizukaXMusic.utils.stream.autoclear import auto_clean
