@@ -26,7 +26,7 @@ def call_random_member(client, message):
 
 
 
-@app.on_message(filters.command(['زوجني,ز'], prefixes=""))
+@app.on_message(filters.command(['ز'], prefixes=""))
 def call_random_member(client, message):
     chat_id = message.chat.id
     members = [
