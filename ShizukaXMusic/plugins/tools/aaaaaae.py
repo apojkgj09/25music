@@ -299,8 +299,8 @@ async def italy(client: Client, message: Message):
         ),
     )
 
-
-@app.on_message(filters.regex("༺┉⊶﴿♡  𝗔𝗩𝗔𝗧𝗔𝗥 ĶËŸBÖÄŖĐ ♡﴾⊷┉༻") & filters.private & SUDOERS)
+   @app.on_message(
+    filters.command(["༺┉⊶"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
