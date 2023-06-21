@@ -1,10 +1,15 @@
+import sys
 import asyncio
-from pyrogram import Client, filters
+import requests
+import re
+import string
+from pyrogram.types import Message
+from aiohttp import ClientSession
+from pyrogram import filters, Client
 from strings import get_command
-from pyrogram.types import Message, VoiceChatStarted, VoiceChatEnded
+from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMarkup, Message)
 from ShizukaXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from ShizukaXMusic.core.call import Shizuka
-from ShizukaXMusic.utils.database import get_assistant
+
 
 
 
@@ -61,7 +66,7 @@ REPLY_MESSAGE_BUTTONS = [
 ]
 
 @app.on_message(
-    filters.command("O") & filters.private & SUDOERS)
+    filters.command(["O"],""))
 async def crsourceowner(client: Client, message: Message):
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
