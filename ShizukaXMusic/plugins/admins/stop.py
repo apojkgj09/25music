@@ -16,7 +16,6 @@ from strings import get_command
 from ShizukaXMusic import app
 from ShizukaXMusic.core.call import Shizuka
 from ShizukaXMusic.utils.database import set_loop
-from ShizukaXMusic.utils.decorators import AdminRightsCheck, AdminRightsCheckCB
 
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
@@ -29,7 +28,6 @@ STOP_COMMAND_chh = get_command("STOP_COMMAND_chh")
     & ~filters.edited
     & ~BANNED_USERS
 )
-@AdminRightsCheck
 async def stop_music(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_2"])
@@ -46,7 +44,6 @@ async def stop_music(cli, message: Message, _, chat_id):
     & ~filters.edited
     & ~BANNED_USERS
 )
-@AdminRightsCheckCB
 async def stop_music_ch(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_2"])
