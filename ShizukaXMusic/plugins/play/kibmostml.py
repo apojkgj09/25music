@@ -15,7 +15,7 @@ from random import  choice, randint
 
 
 
-@app.on_message(filters.regex("^غ$") & filters.group)
+@app.on_message(filters.regex(["غنيلي", "غني", "غنيلي. 🎙", "غنيي"]"") & filters.group)
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/gukygn/{rl}"
@@ -34,7 +34,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(filters.regex("^صوره$") & filters.group)
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
-    url = f"https://t.me/SSSB552/{rl}"
+    url = f"https://t.me/vnnkli/{rl}"
     await client.send_photo(message.chat.id,url,caption="🐉 ¦ تـم اختيـار صوره لـك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -62,4 +62,79 @@ async def ihd(client: Client, message: Message):
         )
     )
 
+@app.on_message(filters.regex("^اقتباس$") & filters.group)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(2,90)
+    url = f"https://t.me/LoreBots9/{rl}"
+    await client.send_photo(message.chat.id,url,caption="🐉 ¦ تـم اختيـار اقتباس لـك",parse_mode="html",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
 
+
+@app.on_message(filters.regex("^افتار بنات$") & filters.group)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(2,90)
+    url = f"https://t.me/vvyuol/{rl}"
+    await client.send_photo(message.chat.id,url,caption="🐉 ¦ تـم اختيـار صوره لـك",parse_mode="html",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
+
+@app.on_message(filters.regex("^افتار عيال$") & filters.group)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(2,90)
+    url = f"https://t.me/vgbmm/{rl}"
+    await client.send_photo(message.chat.id,url,caption="🐉 ¦ تـم اختيـار صوره لـك",parse_mode="html",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
+
+@app.on_message(filters.regex("^سوره$") & filters.group)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(1,90)
+    url = f"https://t.me/opuml/{rl}"
+    await client.send_voice(message.chat.id,url,caption="🐉 ¦ تـم اختيـار ايـه قرآنيه لـك",parse_mode="html",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
+
+
+@app.on_message(filters.regex("^استوري$") & filters.group)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(1,50)
+    url = f"https://t.me/yoipopl/{rl}"
+    await client.send_audio(message.chat.id,url,caption="🐉 ¦ تـم اختيـار استوري لـك",parse_mode="html",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )

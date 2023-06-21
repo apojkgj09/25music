@@ -36,8 +36,8 @@ def call_random_member(client, message):
     random_member = random.choice(members)
     random_member_mention = f"[{random_member.user.first_name}](tg://user?id={random_member.user.id})"
     random_message = random.choice([
-        f"**• اخترت لك هذا الشخص** {random_member_mention} \n **اعلنكم الان امام الجروب زوجاً وزوجه يلا روحو بف اعملو واحد🙈♥**",
-        f"**• اخترت لك هذا الشخص** \n {random_member_mention} \n **انتم الان متزوجين رسميا يلا روحو بف اعملو واحد🌚♥**"
+        f"**•زوجتك ↓↓↓ ** {random_member_mention}",
+        f"**•زوجتك ↓↓↓ ** \n {random_member_mention}"
     ])
     client.send_message(chat_id, random_message, reply_to_message_id=message.message_id, parse_mode='markdown')
 
