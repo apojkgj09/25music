@@ -1,3 +1,13 @@
+#
+# Copyright (C) 2021-2022 by TeamShizuka@Github, < https://github.com/TeamShizuka >.
+#
+# This file is part of < https://github.com/TeamShizuka/ShizukaXMusicBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TeamShizuka/ShizukaXMusicBot/blob/master/LICENSE >
+#
+# All rights reserved.
+
+from ShizukaXMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
@@ -8,22 +18,23 @@ from ShizukaXMusic import YouTube, app
 from ShizukaXMusic.core.call import Shizuka
 from ShizukaXMusic.misc import db
 from ShizukaXMusic.utils.database import get_loop
-from ShizukaXMusic.utils.decorators import AdminRightsCheck
-from ShizukaXMusic.utils.inline.play import stream_markup, telegram_markup
+from ShizukaXMusic.utils.decorators import AdminRightsCheckCB
+from ShizukaXMusic.utils.inline.play import (stream_markup,
+                                          telegram_markup)
 from ShizukaXMusic.utils.stream.autoclear import auto_clean
 from ShizukaXMusic.utils.thumbnails import gen_thumb
 
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")
 
+
 @app.on_message(
-    filters.command(SKIP_COMMAND)  & ~filters.edited & ~BANNED_USERS
+    command(SKIP_COMMAND)
+    & ~filters.edited
+    & ~BANNED_USERS
 )
-@app.on_message(
-    filters.command(["التالي","لندا غيري","تخطي"],"") & filters.group & ~filters.edited & ~BANNED_USERS
-)
-@AdminRightsCheck    
-async def skip(cli, message: Message, _, chat_id): 
+@AdminRightsCheckCB
+async def skip(cli, message: Message, _, chat_id):
     if not len(message.command) < 2:
         loop = await get_loop(chat_id)
         if loop != 0:
@@ -42,24 +53,30 @@ async def skip(cli, message: Message, _, chat_id):
                             try:
                                 popped = check.pop(0)
                             except:
-                                return await message.reply_text(_["admin_16"])
+                                return await message.reply_text(
+                                    _["admin_16"]
+                                )
                             if popped:
-                                if config.AUTO_DOWNLOADS_CLEAR == str(True):
+                                if (
+                                    config.AUTO_DOWNLOADS_CLEAR
+                                    == str(True)
+                                ):
                                     await auto_clean(popped)
                             if not check:
                                 try:
                                     await message.reply_text(
                                         _["admin_10"].format(
                                             message.from_user.first_name
-                                        ),
-                                        disable_web_page_preview=True,
+                                        )
                                     )
                                     await Shizuka.stop_stream(chat_id)
                                 except:
                                     return
                                 break
                     else:
-                        return await message.reply_text(_["admin_15"].format(count))
+                        return await message.reply_text(
+                            _["admin_15"].format(count)
+                        )
                 else:
                     return await message.reply_text(_["admin_14"])
             else:
@@ -76,8 +93,7 @@ async def skip(cli, message: Message, _, chat_id):
                     await auto_clean(popped)
             if not check:
                 await message.reply_text(
-                    _["admin_10"].format(message.from_user.first_name),
-                    disable_web_page_preview=True,
+                    _["admin_10"].format(message.from_user.first_name)
                 )
                 try:
                     return await Shizuka.stop_stream(chat_id)
@@ -86,8 +102,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             try:
                 await message.reply_text(
-                    _["admin_10"].format(message.from_user.first_name),
-                    disable_web_page_preview=True,
+                    _["admin_10"].format(message.from_user.first_name)
                 )
                 return await Shizuka.stop_stream(chat_id)
             except:
@@ -101,7 +116,9 @@ async def skip(cli, message: Message, _, chat_id):
     if "live_" in queued:
         n, link = await YouTube.video(videoid, True)
         if n == 0:
-            return await message.reply_text(_["admin_11"].format(title))
+            return await message.reply_text(
+                _["admin_11"].format(title)
+            )
         try:
             await Shizuka.skip_stream(chat_id, link, video=status)
         except Exception:
@@ -119,7 +136,9 @@ async def skip(cli, message: Message, _, chat_id):
         db[chat_id][0]["mystic"] = run
         db[chat_id][0]["markup"] = "tg"
     elif "vid_" in queued:
-        mystic = await message.reply_text(_["call_10"], disable_web_page_preview=True)
+        mystic = await message.reply_text(
+            _["call_10"], disable_web_page_preview=True
+        )
         try:
             file_path, direct = await YouTube.download(
                 videoid,
@@ -170,7 +189,9 @@ async def skip(cli, message: Message, _, chat_id):
                 photo=config.TELEGRAM_AUDIO_URL
                 if str(streamtype) == "audio"
                 else config.TELEGRAM_VIDEO_URL,
-                caption=_["stream_3"].format(title, check[0]["dur"], user),
+                caption=_["stream_3"].format(
+                    title, check[0]["dur"], user
+                ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
@@ -181,7 +202,9 @@ async def skip(cli, message: Message, _, chat_id):
                 photo=config.SOUNCLOUD_IMG_URL
                 if str(streamtype) == "audio"
                 else config.TELEGRAM_VIDEO_URL,
-                caption=_["stream_3"].format(title, check[0]["dur"], user),
+                caption=_["stream_3"].format(
+                    title, check[0]["dur"], user
+                ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
