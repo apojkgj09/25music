@@ -43,22 +43,22 @@ REPLY_MESSAGE_BUTTONS = [
         ("🆔️︙ايـديـهـك︙🆔️")
     ],
     [
-        ("💡︙جـروبـاتـك النـشـطـه︙💡"),
+        ("جروبات النشطه"),
     ],
     [
         ("🥁 ┉ ┉ ┉ ┉ ¦ [⌞ 𝘼𝙑𝘼𝙏𝘼𝙍𖢻 ⌯ َِ𝙈َِ𝙐َِ𝙎َِ𝙄َِ𝘾 ⌯ ˹🎧˼⁩ ⌝ ¦ ┉ ┉ ┉ ┉ 🥁")
     ],
     [
-        ("⛔︙حـظـر الـجـروبـات︙⛔"),
+        ("حظر الجروبات"),
     ],
     [
         ("🥁 ┉ ┉ ┉ ┉ ¦ [⌞ 𝘼𝙑𝘼𝙏𝘼𝙍𖢻 ⌯ َِ𝙈َِ𝙐َِ𝙎َِ𝙄َِ𝘾 ⌯ ˹🎧˼⁩ ⌝ ¦ ┉ ┉ ┉ ┉ 🥁")
     ],
     [
-        ("🙅‍♂️︙بـدون تـوكـن︙🙅‍♂️"),
+        ("توكن بوتك"),
     ],
     [
-        ("قـفـل الـكـيـبـورد"),
+        ("اخفاء الازرار"),
     ],
     [
         ("☎️︙للتواصل معنآ ♬"),
@@ -186,7 +186,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("📥︙الـيـوتـيـوب︙📥") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["📥︙الـيـوتـيـوب︙📥"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -204,7 +205,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("🚫︙المحـظـوريـن︙🚫") & filters.private & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["المحظورين"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -222,7 +224,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("👮‍♀️︙مـطـوريـنـك︙👮‍♀️") & filters.private & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["المطورين"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -240,7 +243,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("🆔️︙ايـديـهـك︙🆔️") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["ايديك"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -258,7 +262,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("💡︙جـروبـاتـك النـشـطـه︙💡") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["الجروبات النشطه"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -276,7 +281,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("⛔︙حـظـر الـجـروبـات︙⛔") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["حظر الجروبات"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -312,7 +318,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.regex("🙅‍♂️︙بـدون تـوكـن︙🙅‍♂️") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["توكن يونك"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
@@ -330,7 +337,8 @@ async def italy(client: Client, message: Message):
     )
 
 
-@app.on_callback_query(filters.regex("قـفـل الـكـيـبـورد") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["اخفاء الازرار"],""))
 async def italy(_, query: CallbackQuery):
    await callback_query.edit_message_caption(caption =f"""**♬ تــم حــذف الــڪــيــبــورد .**""",
         reply_markup=InlineKeyboardMarkup(
