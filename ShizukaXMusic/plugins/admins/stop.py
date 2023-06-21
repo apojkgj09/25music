@@ -34,7 +34,7 @@ async def stop_music(cli, message: Message, _, chat_id):
     filters.command(STOP_COMMAND_chh) & filters.channel & ~filters.edited & ~BANNED_USERS
 )
 @AdminRightsCheck
-async def stop_music(cli, message: Message, _, chat_id):
+async def stop_music_ch(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_2"])
     await Shizuka.stop_stream(chat_id)
