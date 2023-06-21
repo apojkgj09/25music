@@ -299,7 +299,7 @@ async def italy(client: Client, message: Message):
         ),
     )
 
-   @app.on_message(
+@app.on_message(
     filters.command(["༺┉⊶"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
