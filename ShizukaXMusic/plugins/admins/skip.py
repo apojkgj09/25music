@@ -17,7 +17,7 @@ from ShizukaXMusic.utils.thumbnails import gen_thumb
 SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 @app.on_message(
-    filters.command(SKIP_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    filters.command(SKIP_COMMAND)  & ~filters.edited & ~BANNED_USERS
 )
 @app.on_message(
     filters.command(["التالي","لندا غيري","تخطي"],"") & filters.group & ~filters.edited & ~BANNED_USERS
