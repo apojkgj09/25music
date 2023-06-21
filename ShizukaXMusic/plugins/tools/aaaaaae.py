@@ -167,7 +167,8 @@ def reply_to_HEY(Client, message):
   )
 
 
-@app.on_message(filters.regex("لغة البوت 🚩") & filters.private & SUDOERS)
+@app.on_message(
+    filters.command(["الغه"],""))
 async def italy(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
