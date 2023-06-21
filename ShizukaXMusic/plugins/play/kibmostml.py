@@ -15,7 +15,7 @@ from random import  choice, randint
 
 
 
-@app.on_message(filters.regex(["غنيلي", "غني", "غنيلي. 🎙", "غنيي"]"") & filters.group)
+@app.on_message(filters.command(["غ","غنيلي"],"")
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/gukygn/{rl}"
