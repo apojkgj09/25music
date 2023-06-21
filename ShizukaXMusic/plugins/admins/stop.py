@@ -39,6 +39,10 @@ async def stop_music_ch(cli, message: Message, _, chat_id):
         return await message.reply_text(_["general_2"])
     await Shizuka.stop_stream(chat_id)
     await set_loop(chat_id, 0)
+    if message.sender_chat:
+        mention = f'<a href=tg://user?id={message.chat.id}>{message.chat.title}</a>'
+    else:
+        mention = message.from_user.mention
     await message.reply_text(
-        _["admin_9"].format(message.from_user.mention), disable_web_page_preview=True
+        _["admin_9"].format(mention)
     )
