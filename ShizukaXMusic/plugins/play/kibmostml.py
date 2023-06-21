@@ -34,7 +34,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(filters.regex("^صوره$") & filters.group)
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
-    url = f"https://t.me/vnnkli/{rl}"
+    url = f"https://t.me/SSSB552/{rl}"
     await client.send_photo(message.chat.id,url,caption="🐉 ¦ تـم اختيـار صوره لـك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
