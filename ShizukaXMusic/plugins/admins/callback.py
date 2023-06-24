@@ -13,7 +13,6 @@ from config import (
     adminlist,
 )
 from ShizukaXMusic import YouTube, app
-from ShizukaXMusic.core.call import Shizuka
 from ShizukaXMusic.misc import SUDOERS, db
 from ShizukaXMusic.utils.database import (
     is_active_chat,
