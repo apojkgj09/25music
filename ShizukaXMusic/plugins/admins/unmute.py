@@ -4,6 +4,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS
 from strings import get_command
 from ShizukaXMusic import app
+from ShizukaXMusic.core.call import Shizuka
 from ShizukaXMusic.utils.database import is_muted, mute_off
 from ShizukaXMusic.utils.decorators import AdminRightsCheck
 
