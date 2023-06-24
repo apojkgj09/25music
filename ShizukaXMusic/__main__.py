@@ -8,7 +8,6 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from ShizukaXMusic import LOGGER, app, userbot
-from ShizukaXMusic.core.call import Shizuka
 from ShizukaXMusic.plugins import ALL_MODULES
 from ShizukaXMusic.utils.database import get_banned_users, get_gbanned
 
