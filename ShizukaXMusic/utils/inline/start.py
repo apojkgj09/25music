@@ -177,7 +177,7 @@ REPLY_MESSAGE_BUTTONS = [
 
           ],
           [             
-             ("اوامر التسليه")
+             ("&اوامر التسليه&")
           ],
           [
              ("اخفاء الازرار")
@@ -320,7 +320,7 @@ REPLY_MESSAGE_BUTTONSS = [
 ]
 
   
-@app.on_message(filters.private & command("اوامر التسليه"))
+@app.on_message(filters.private & command("$اوامر التسليه$"))
 async def com(_, message: Message):             
         text = REPLY_MESSAGEE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONSS, resize_keyboard=True)
