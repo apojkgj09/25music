@@ -289,6 +289,41 @@ async def com(_, message: Message):
               reply_markup=reply_markup
         )
 
+REPLY_MESSAGEE = "- هلا فيك في قسم الاوامر"
+
+REPLY_MESSAGE_BUTTONSS = [
+         [
+             ("شرح التشغيل بمنصات الاغاني")
+          ],
+          [
+             ("اوامر المجموعة"),
+             ("اوامر القنوات")
+          ],
+          [
+             ("طريقة البحث"),
+             ("ربط القنوات")
+          ],
+          [
+             ("حفظ التشغيل")             
+          ],
+          [
+             ("رجوع")
+          ],
+          [
+            ("اخفاء الازرار")
+          ]
+]
+
+  
+@app.on_message(filters.private & command("المطور"))
+async def com(_, message: Message):             
+        text = REPLY_MESSAGEE
+        reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONSS, resize_keyboard=True)
+        await message.reply(
+              text=text,
+              reply_markup=reply_markup
+        )
+
 
 
 @app.on_message(filters.private & command("رجوع"))
