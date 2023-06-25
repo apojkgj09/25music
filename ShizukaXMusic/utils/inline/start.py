@@ -289,47 +289,6 @@ async def com(_, message: Message):
               reply_markup=reply_markup
         )
 
-REPLY_MESSAGEE = "- هلا فيك في قسم الاوامر"
-
-REPLY_MESSAGE_BUTTONSS = [
-         [
-             ("•كت•")
-          ],
-          [
-             ("صراحه"),
-             ("تحدي")
-          ],
-          [
-             ("حروف"),
-             ("افتار عيال")
-          ],
-          [
-             ("افتار بنات"),
-             ("صوره")
-          ],
-          [
-             ("انمي"),
-             ("غنيلي")         
-          ],
-          [
-             ("رجوع")
-          ],
-          [
-            ("اخفاء الازرار")
-          ]
-]
-
-  
-@app.on_message(filters.private & command("$اوامر التسليه$"))
-async def com(_, message: Message):             
-        text = REPLY_MESSAGEE
-        reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONSS, resize_keyboard=True)
-        await message.reply(
-              text=text,
-              reply_markup=reply_markup
-        )
-
-
 
 @app.on_message(filters.private & command("رجوع"))
 async def bask(_, message: Message):             
