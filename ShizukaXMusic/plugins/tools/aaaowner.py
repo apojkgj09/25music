@@ -67,7 +67,7 @@ REPLY_MESSAGE_BUTTONS = [
 ]
 
 @app.on_message(
-    filters.command("don") & filters.private & SUDOERS)
+    filters.command("اوامر التسليه") & filters.private & SUDOERS)
 async def crsourceowner(client: Client, message: Message):
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
