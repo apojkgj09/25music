@@ -14,20 +14,79 @@ from pyrogram.errors import MessageNotModified
 
 
 
-@app.on_message(filters.command(["اكامي"],""))
-async def khalid(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://graph.org/file/c990c7c6d1f3e7e42812f.jpg",
-        caption=f"""◉ 𝙽𝙰𝙼𝙴 : »» [𐏓 𝘼𝙆𝘼𝙈𝙀𝆹𝅥𝅮⏤͟͟͞͞ ░⃟‌‎‌‌🇪🇦](https://t.me/FHK_M5)
-◉ 𝚄𝚂𝙴𝚁 : »» @FHK_M5
-◉ 𝙸𝙳   : »» 6230638204
-◉ 𝙱𝙸𝙾  : »» **- لم يعد بالي يُبالي فـ ليحترق ڪًٰل شي**""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-            [
-                InlineKeyboardButton("𐏓 𝘼𝙆𝘼𝙈𝙀𝆹𝅥𝅮⏤͟͟͞͞ ░⃟‌‎‌‌🇪🇦", url=f"https://t.me/FHK_M5"),
-            ]
-         ]
-     )
-  )
+REPLY_MESSAGE = "- اهلين ياحلو تحكم من الازرار اسفل"
 
+
+
+
+REPLY_MESSAGE_BUTTONS = [
+
+         ],
+    [
+        ("استوريهات. 🥹")
+    ],
+    [
+        ("افتار عيال"),
+        ("افتار بنات")
+    ],
+    [
+        ("قران")
+    ],
+    [
+        ("اقتباسات"),
+        ("هيدرات")
+    ],
+    [
+        ("غنيلي. 🎙")
+    ],
+    [
+        ("صوره"),
+        ("انميي")
+    ],
+    [
+        ("متحركه")
+    ],
+    [
+        ("تويت"),
+        ("صراحه")
+    ],
+    [
+        ("نكته"),
+        ("كتبات")
+    ],
+    [
+        ("لو خيروك"),
+        ("انصحني")
+    ],
+    [
+        ("بوت حذف")
+    ],
+    [
+       ("انصحني. 🥲")
+        
+    ],
+    [ 
+              
+      ("اخفاء الازرار")
+
+          ]
+
+]
+
+
+
+
+  
+
+@app.on_message(filters.command(["اوامر التسليه"],""))
+async def cpanel(_, message: Message):             
+        text = REPLY_MESSAGE
+        reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
+        await message.reply(
+              text=text,
+              reply_markup=reply_markup
+        )
+
+@app.on_message(filters.regex("اخفاء الازرار") & filters.group)
+async def down(client, message):
+          m = await message.reply("**- ابشر تم اخفاء الازرار بنجاح\n- لو تبي تطلعها مرة ثانية اكتب ميرا**", reply_markup= ReplyKeyboardRemove(selective=True))
